@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Livingrooms = () => {
+const SliderCard = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const Livingrooms = () => {
     );
 };
 
-export default Livingrooms;
+export default SliderCard;

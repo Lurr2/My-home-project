@@ -1,0 +1,20 @@
+@import '../../css/variables.module.scss';
+
+.container {
+    height: 100vh;
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7121e981136777.5de679ed6f907.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+
+    .inputSpace {
+        padding: 0 .6rem;
+    }
+
+    .items {
+        padding: 2rem;
+    }
+}

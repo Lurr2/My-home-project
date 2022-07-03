@@ -6,15 +6,16 @@ background-color: $color-secondary-light;
         text-transform: uppercase;
         text-align: center;
         color: $color-heading-text;
+        font-size: 2rem;
     }
     .h4text {
         color: $color-secondary-dark;
+        font-size: 1.5rem;
     }
     .nav ul {
         list-style: none;
         display: flex;
-        margin: 0;
-        padding: 0;
+        justify-content: center;
       }
       
       .nav li {
@@ -31,5 +32,8 @@ background-color: $color-secondary-light;
       .nav a:active,
       .nav a.active {
         color: #f23434;
+      }
+      .searchBar {
+        background-color: red;
       }
 }

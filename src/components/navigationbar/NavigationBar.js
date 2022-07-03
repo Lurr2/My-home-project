@@ -34,8 +34,12 @@ const NavigationBar = () => {
                             Bedrooms
                         </NavLink>
                     </li>
-
+                    <li>
+                    <input className={classes.searchBar} type="search" id="search-bar" ></input>
+                    </li>
                 </ul>
+
+               
 
             </nav>
 
