@@ -1,0 +1,43 @@
+@import '../../css/variables.module.scss';
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-primary;
+    
+
+    .image {
+        height: 35rem;
+        width: 45rem;
+        border-radius: 2rem;
+    }
+    .right_arrow {
+        position: absolute;
+        top: 50%;
+        right: 2rem;
+        font-size: 3rem;
+        color: $color-button;
+        z-index: 5;
+        cursor: pointer;
+    }
+    .left_arrow {
+        position: absolute;
+        top: 50%;
+        left: 2rem;
+        font-size: 3rem;
+        color: $color-button;
+        z-index: 5;
+        cursor: pointer;
+    }
+    .slide {
+        opacity: 0;
+        transition-duration: 1s ease;
+    }
+    .slide_active {
+        opacity: 1;
+        transition-duration: 1s;
+        transform: scale(1.1);
+    }
+}
