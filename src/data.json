@@ -11,6 +11,11 @@
         {"id": "9", "image": "https://media.istockphoto.com/photos/modern-living-room-with-kitchen-picture-id1223427790?k=20&m=1223427790&s=612x612&w=0&h=4aA2SqWOqKJHigbRWJz-p0Z2_Au7KjwVFidwiTiPW2E="}
 
 
+    ],
+
+    "BestDesignerData": [
+        {"id": "1", "direction": "left", "UpText": "This is Kyla, an expert in interior design", "DownText": "Renovate your home. write to us and let's get started!", "FooterText":"Home, sweet home", "image": "https://cdn7.dissolve.com/p/D2012_142_061/D2012_142_061_1200.jpg"}
+
     ]
 
 

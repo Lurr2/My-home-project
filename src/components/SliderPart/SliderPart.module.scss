@@ -7,6 +7,12 @@
     align-items: center;
     flex-direction: column;
     background-color: $color-primary;
+
+    .heading {
+        color: $color-heading-text;
+        margin-bottom: 2rem;
+        font-size: 3.5rem;
+    }
     
     .containerSlider {
         display: flex;
@@ -66,5 +72,10 @@
             transform: scale(1.3);
             opacity: 1;
         }
+    }
+    .text {
+        text-align: center;
+        margin: 2rem;
+        width: 30rem;
     }
 }

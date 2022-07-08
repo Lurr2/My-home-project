@@ -1,0 +1,30 @@
+@import '../../../css/variables.module.scss';
+
+.container {
+    display: flex;
+    background-color: $color-secondary-dark;
+
+    .content, .picture {
+        flex: 1;
+    }
+    img {
+        width:100%;
+        height:100%;
+    }
+    .content {
+        text-align: center;
+        margin: auto 0;
+    }
+    .heading {
+        font-size: 2.5rem;
+    }
+    .description {
+        font-size: 1.3rem;
+        margin: 1rem;
+    }
+    .foot {
+        margin-top: 1rem;
+        font-size: 2.2rem;
+    }
+    
+}
