@@ -3,6 +3,7 @@ import Heading from '../../Heading/Heading';
 import SliderPart from '../../SliderPart/SliderPart';
 import data from '../../../data.json';
 import BestDesigner from '../../BestDesigner/BestDesigner';
+import SignUp from '../../SignUp/SignUp';
 
 const Home = () => {
     return (
@@ -10,6 +11,7 @@ const Home = () => {
             <Heading/>
             <SliderPart slides={data.slider}/>
             <BestDesigner />
+            <SignUp />
         </div>
     );
 };
