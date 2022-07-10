@@ -4,6 +4,7 @@ import SliderPart from '../../SliderPart/SliderPart';
 import data from '../../../data.json';
 import BestDesigner from '../../BestDesigner/BestDesigner';
 import SignUp from '../../SignUp/SignUp';
+import NewSeason from '../../NewSeason/NewSeason';
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <SliderPart slides={data.slider}/>
             <BestDesigner />
             <SignUp />
+            <NewSeason />
         </div>
     );
 };
