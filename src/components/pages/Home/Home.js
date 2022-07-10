@@ -5,6 +5,7 @@ import data from '../../../data.json';
 import BestDesigner from '../../BestDesigner/BestDesigner';
 import SignUp from '../../SignUp/SignUp';
 import NewSeason from '../../NewSeason/NewSeason';
+import DoItYourself from '../../DoItYourself/DoItYourself';
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <BestDesigner />
             <SignUp />
             <NewSeason />
+            <DoItYourself YourselfLenght={data.DoItYourselfData}/>
         </div>
     );
 };

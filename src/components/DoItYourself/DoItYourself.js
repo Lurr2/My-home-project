@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { useState } from 'react';
 import data from '../../data.json';
 import classes from './DoItYourself.module.scss';
@@ -6,7 +7,7 @@ import classes from './DoItYourself.module.scss';
 const DoItYourself = ({ YourselfLenght }) => {
 
     const [ActivePicture, SetActivePicture] = useState(0);
-    const length = YourselfLenght.lenght;
+    const length = YourselfLenght.length;
 
     const changePicture = (i) => {
         SetActivePicture(ActivePicture => ActivePicture = i)
@@ -30,18 +31,18 @@ const DoItYourself = ({ YourselfLenght }) => {
     }
 
     return (
-        <section>
-            <div>
-                <h2>Do it yourself.</h2>
-                <p>Renovate your house. We advise you</p>
-                <p>Home, sweet home</p>
+        <section className={classes.container}>
+            <div className={classes.content}>
+                <h2 className={classes.heading}>Do it yourself.</h2>
+                <p className={classes.renovate}>Renovate your house. We advise you</p>
+                <p className={classes.sweet}>Home, sweet home</p>
             </div>
 
             {data.DoItYourselfData
                 .slice(
                     ActivePicture, ActivePicture + 1).map((figure, index) => { //górny
                         return (
-                            <div key={index}>
+                            <div key={index} className={classes.mainPicture}>
                                 <img alt='some' src={figure.image} className={classes.image} />
                             </div>
 
@@ -58,9 +59,9 @@ const DoItYourself = ({ YourselfLenght }) => {
                         <div key={index} className={classes.bottomPicture}>
                             <img alt='some' src={figure.image} className={classes.image} />
                         </div>
-                    )
+                    );
                 })}
-
+            <div className={classes.dots}>{dots}</div>
         </section>
     );
 };
