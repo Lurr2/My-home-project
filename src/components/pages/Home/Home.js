@@ -6,6 +6,7 @@ import BestDesigner from '../../BestDesigner/BestDesigner';
 import SignUp from '../../SignUp/SignUp';
 import NewSeason from '../../NewSeason/NewSeason';
 import DoItYourself from '../../DoItYourself/DoItYourself';
+import SignInTab from '../../SignInTab/SignInTab';
 
 const Home = () => {
     return (
@@ -16,6 +17,7 @@ const Home = () => {
             <SignUp />
             <NewSeason />
             <DoItYourself YourselfLenght={data.DoItYourselfData}/>
+            <SignInTab/>
         </div>
     );
 };

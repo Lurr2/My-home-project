@@ -1,0 +1,36 @@
+@import '../../css/variables.module.scss';
+.container {
+    height: 140vh;
+    background-image: url(https://web.staitiehdecoration.com/wp-content/uploads/2022/03/eYso2SduiRD5MFVh26oYLD.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    .heading {
+        color: $color-heading-text;
+        font-size: 2rem;
+        background-color: rgba($color-white, .8);
+        padding: 5rem;
+    }
+    .inputs {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: rgba($color-white, .6);
+        width: 40rem;
+        padding: 2rem;
+        margin: 15rem auto;
+    }
+    .bar{
+        
+        width: 36rem;
+        height: 2rem;
+        margin-top: 1rem;
+        border-radius: 0.2rem;
+        border: solid $color-white;
+    }
+    .text {
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+}

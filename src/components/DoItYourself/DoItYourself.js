@@ -40,9 +40,10 @@ const DoItYourself = ({ YourselfLenght }) => {
 
             {data.DoItYourselfData
                 .slice(
-                    ActivePicture, ActivePicture + 1).map((figure, index) => { //górny
+                    ActivePicture, ActivePicture + 1).map((figure) => { //górny
                         return (
-                            <div key={index} className={classes.mainPicture}>
+                            
+                            <div key={figure} className={classes.mainPicture}>
                                 <img alt='some' src={figure.image} className={classes.image} />
                             </div>
 
@@ -54,9 +55,9 @@ const DoItYourself = ({ YourselfLenght }) => {
                     ActivePicture === data.DoItYourselfData.length - 1 ? 0 : ActivePicture + 1,
                     ActivePicture === data.DoItYourselfData.length - 1 ? 1 : ActivePicture + 2
                 )
-                .map((figure, index) => { //dolny
+                .map((figure) => { //dolny
                     return (
-                        <div key={index} className={classes.bottomPicture}>
+                        <div key={figure} className={classes.bottomPicture}>
                             <img alt='some' src={figure.image} className={classes.image} />
                         </div>
                     );
