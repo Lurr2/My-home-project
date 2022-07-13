@@ -7,7 +7,7 @@ import classes from './DoItYourself.module.scss';
 const DoItYourself = ({ YourselfLenght }) => {
 
     const [ActivePicture, SetActivePicture] = useState(0);
-    const length = YourselfLenght.length;
+    
 
     const changePicture = (i) => {
         SetActivePicture(ActivePicture => ActivePicture = i)
