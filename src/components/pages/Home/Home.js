@@ -8,6 +8,7 @@ import NewSeason from '../../NewSeason/NewSeason';
 import DoItYourself from '../../DoItYourself/DoItYourself';
 import SignInTab from '../../SignInTab/SignInTab';
 import TwentyFourHours from '../../TwentyFourHours/TwentyFourHours';
+import About from '../../About/About';
 
 const Home = () => {
     return (
@@ -20,6 +21,7 @@ const Home = () => {
             <DoItYourself YourselfLenght={data.DoItYourselfData}/>
             <SignInTab/>
             <TwentyFourHours/>
+            <About />
         </div>
     );
 };

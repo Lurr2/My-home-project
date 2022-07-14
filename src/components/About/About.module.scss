@@ -1,0 +1,71 @@
+@import '../../css/variables.module.scss';
+
+.container {
+    background-color: $color-grey;
+    display: flex;
+    color: $color-white;
+    
+
+    .box {
+        flex: 1;
+        height: 20rem;
+        
+        
+        &_one {
+            text-align: right;
+            padding: 2rem;
+            font-size: 1.2rem;
+            
+        }
+        .listSetting {
+            list-style: none;
+
+        }
+        .listOne{
+            text-transform: uppercase;
+        }
+
+        .listTwo{
+            margin-top: 1rem;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+        li {
+            margin:.2rem 0;
+        }
+
+        &_two {
+            flex-grow: 1 ;
+            padding: 2rem;
+            text-align: center;
+            .question {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+            .input {
+                width:12.1rem;
+                border: none;
+                margin-bottom: .5rem;
+            }
+            .textMiddle {
+                margin-top: .5rem;
+                font-size: .8rem;
+            }
+        }
+
+        &_three {
+            text-transform: uppercase;
+            text-align: center;
+            padding: 6rem 0;
+            
+            .solution {
+                font-size: 0.8rem;
+            }
+            .home {
+                font-size: 2rem;
+                letter-spacing: .6rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}
