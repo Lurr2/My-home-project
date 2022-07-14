@@ -1,6 +1,7 @@
 @import '../../css/variables.module.scss';
 .container {
 background-color: $color-secondary-light;
+padding-bottom: .5rem;
 
     .title {
         text-transform: uppercase;
