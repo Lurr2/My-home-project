@@ -46,6 +46,7 @@
     }
     .slide {
         transition-duration: 1s ease;
+        opacity: 0;
     }
     .slide_active {
         opacity: 1;
