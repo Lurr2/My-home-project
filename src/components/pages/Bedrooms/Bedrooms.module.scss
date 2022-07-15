@@ -1,43 +1,42 @@
 @import '../../../css/variables.module.scss';
 .container{
-  background-color: $color-primary;
-  text-align: center;
+    background-color: $color-primary;
+    text-align: center;
 
-  h1 {
+    h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
     color: $color-heading-text;
     letter-spacing: 1rem;
-  }
-  .img_box{
-    display: flex;
+    }
+
+    .picture_box {
+        display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-  }
+    }
 
-  .image-card {
+    .pictures_card{
     width: 25vw;
     height: 25vw;
     object-fit: cover;
     margin: 1rem;
     border: solid .5rem $color-white;
-    border-radius: 1rem;
+    border-radius: 50%;
     opacity: .7;
     transition: all .5s;
+    
     &:hover {
-      transform: scale(1.1);
-      opacity: 1;
+      border-radius: 0;
     }
   }
-  
-  #lightbox-img {
+
+  .lightbox_img{
     height: 80vh;
     max-width: 90vw;
     object-fit: cover;
-    
   }
-  
-  #lightbox {
+  .lightbox_view {
     z-index: 1;
     position: fixed;
     top: 0;
@@ -49,19 +48,13 @@
     align-items: center;
     justify-content: space-between;
   }
-  
   button {
     color: $color-black;
     border: 2px solid $color-secondary-dark;
-    background-color: $color-secondary-light;
+    background-color: $color-white;
     font-size: 4rem;
   }
-  
-  
   img:hover, button:hover {
     cursor: pointer;
   }
 }
-
-
-  

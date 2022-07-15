@@ -1,75 +1,81 @@
 import React, { useState } from 'react';
-import data from '../../../data.json';
-import Modal from '../../common/ModalLivingRoom/Modal';
+import data from './data.json';
 import './Livingrooms.scss';
 
+//Component
 const Livingrooms = () => {
-
-    const [clickedImg, setClickedImg] = useState(null);
-    const [currentIndex, setCurrentIndex] = useState(null);
-  
-    const handleClick = (item, index) => {
-      setCurrentIndex(index);
-      setClickedImg(item.link);
-    };
-  
-    const handelRotationRight = () => {
-      const totalLength = data.data.length;
-      if (currentIndex + 1 >= totalLength) {
-        setCurrentIndex(0);
-        const newUrl = data.data[0].link;
-        setClickedImg(newUrl);
-        return;
-      }
-      const newIndex = currentIndex + 1;
-      const newUrl = data.data.filter((item) => {
-        return data.data.indexOf(item) === newIndex;
-      });
-      const newItem = newUrl[0].link;
-      setClickedImg(newItem);
-      setCurrentIndex(newIndex);
-    };
-  
-    const handelRotationLeft = () => {
-      const totalLength = data.LivingRooms.length;
-      if (currentIndex === 0) {
-        setCurrentIndex(totalLength - 1);
-        const newUrl = data.LivingRooms[totalLength - 1].link;
-        setClickedImg(newUrl);
-        return;
-      }
-      const newIndex = currentIndex - 1;
-      const newUrl = data.LivingRooms.filter((item) => {
-        return data.LivingRooms.indexOf(item) === newIndex;
-      });
-      const newItem = newUrl[0].link;
-      setClickedImg(newItem);
-      setCurrentIndex(newIndex);
-    };
-  
     return (
-      <div className="wrapper">
-        {data.data.map((item, index) => (
-          <div key={index} className="wrapper-images">
-            <img
-              src={item.link}
-              alt={item.text}
-              onClick={() => handleClick(item, index)}
-            />
-            <h2>{item.text}</h2>
-          </div>
-        ))}
-        <div>
-          {clickedImg && (
-            <Modal
-              clickedImg={clickedImg}
-              handelRotationRight={handelRotationRight}
-              setClickedImg={setClickedImg}
-              handelRotationLeft={handelRotationLeft}
-            />
-          )}
-        </div>
-      </div>
+        <section className="container">
+            <h1>Living rooms gallery</h1>
+            <div className="img_box">
+                <ImageGallery />
+            </div>
+        </section>
     );
-  }
+}
+
+
+//Logic
+const ImageGallery = () => {
+    const [imageToShow, setImageToShow] = useState("");
+    const [lightboxDisplay, setLightBoxDisplay] = useState(false);
+
+    //looping through our images array to create img elements
+    const imageCards = data.LivingRooms.map((image) => (
+        <img alt="some" className="image-card" onClick={() => showImage(image)} src={image.image} />
+    ));
+
+    //showing image and displaying popup
+    const showImage = (image) => {
+        setImageToShow(image);
+        setLightBoxDisplay(true);
+    };
+
+    //hide lightbox
+    const hideLightBox = () => {
+        setLightBoxDisplay(false);
+    };
+
+    //next image
+    const showNext = (e) => {
+        e.stopPropagation();
+        let currentIndex = data.LivingRooms.indexOf(imageToShow);
+        if (currentIndex >= data.LivingRooms.length - 1) {
+            setLightBoxDisplay(false);
+        } else {
+            let nextImage = data.LivingRooms[currentIndex + 1];
+            setImageToShow(nextImage);
+        }
+    };
+
+    //previous image
+    const showPrev = (e) => {
+        e.stopPropagation();
+        let currentIndex = data.LivingRooms.indexOf(imageToShow);
+        if (currentIndex <= 0) {
+            setLightBoxDisplay(false);
+        } else {
+            let nextImage = data.LivingRooms[currentIndex - 1];
+            setImageToShow(nextImage);
+        }
+    };
+
+
+    return (
+        <section>
+            <div>{imageCards}</div>
+
+            {
+                lightboxDisplay ?
+                    <div id="lightbox" onClick={hideLightBox}>
+                        <button onClick={showPrev}>⭠</button>
+                        <img alt="some" id="lightbox-img" src={imageToShow.image}></img>
+                        <button onClick={showNext}>⭢</button>
+                    </div>
+                    : ""
+            }
+        </section>
+    );
+}
+
 export default Livingrooms;
