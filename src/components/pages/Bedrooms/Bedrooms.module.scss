@@ -26,6 +26,7 @@
     opacity: .7;
     transition: all .5s;
     
+    
     &:hover {
       border-radius: 0;
     }
@@ -56,5 +57,28 @@
   }
   img:hover, button:hover {
     cursor: pointer;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .picture_box {
+      flex-direction: column;
+  }
+    .pictures_card {
+      width: 30vw;
+      height: 30vw;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .pictures_card {
+      width: 50vw;
+      height: 50vw;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      color: $color-heading-text;
+      letter-spacing: 1rem;
+      }
   }
 }

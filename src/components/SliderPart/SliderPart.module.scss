@@ -44,15 +44,6 @@
         z-index: 5;
         cursor: pointer;
     }
-    .slide {
-        transition-duration: 1s ease;
-        opacity: 0;
-    }
-    .slide_active {
-        opacity: 1;
-        transition-duration: 1s;
-        transform: scale(1.1);
-    }
     .lewyImage, .prawyImage{
         transform: scale(.7);
         opacity: .5;
@@ -93,4 +84,31 @@
         margin: 2rem;
         width: 30rem;
     }
+    @media only screen and (max-width: 900px) {
+        .lewyImage, .prawyImage {
+          display: none;
+      }
+      .image {
+        height: 10rem;
+        width: 20rem;
+      }
+      .right_arrow {
+        margin-left: 2rem;
+    }
+    .left_arrow {
+        margin-right: 2rem;
+    }
+}
+      @media only screen and (max-width: 600px) {
+        .pictures_card {
+          width: 50vw;
+          height: 50vw;
+        }
+        .right_arrow {
+            margin-left: 1rem;
+        }
+        .left_arrow {
+            margin-right: 1rem;
+        }
+      }
 }

@@ -61,6 +61,22 @@
   img:hover, button:hover {
     cursor: pointer;
   }
+
+  @media only screen and (max-width: 900px) {
+    .img_box {
+      flex-direction: column;
+  }
+  .image-card {
+      width: 30vw;
+      height: 30vw;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .image-card {
+      width: 50vw;
+      height: 50vw;
+    }
+  }
 }
 
 
