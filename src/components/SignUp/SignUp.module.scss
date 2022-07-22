@@ -35,5 +35,39 @@
         margin-top: 1rem;
         margin-left: 15rem;
     }
+    @media only screen and (max-width: 900px) {
+        .signUpText {
+            font-size: 1.2rem;
+            margin: .5rem 0;
+        }
+        .receiveText{
+            font-size: 1.5rem;
+            color: $color-heading-misc;
+        }
+        .spaceMargin {
+            margin: 0 1rem;
+        }
+        .text {
+            margin-left: 8rem;
+           
+        }
+    }
+    @media only screen and (max-width: 900px) {
+        .signUpText {
+            font-size: 1rem;
+            margin: .5rem 0;
+        }
+        .receiveText{
+            font-size: 1.3rem;
+            color: $color-heading-misc;
+        }
+        .spaceMargin {
+            margin: 0 1rem;
+        }
+        .text {
+            margin-left: 3rem;
+           
+        }
+    }
 }
 

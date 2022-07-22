@@ -19,6 +19,18 @@
         font-size: 2.5rem;
        color: $color-heading-misc;
     }
+    @media only screen and (max-width: 900px) {
+        .heading {
+            font-size: 2rem;
+           
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        .heading {
+            font-size: 1.5rem;
+           
+        }
+    }
     .description {
         font-size: 1.3rem;
         margin: 1rem;
@@ -26,6 +38,18 @@
     .foot {
         margin-top: 1rem;
         font-size: 2.2rem;
+    }
+    @media only screen and (max-width: 900px) {
+        .foot {
+            font-size: 1.5rem;
+           
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        .description {
+            font-size: 1.1rem;
+           
+        }
     }
     
 }
