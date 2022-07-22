@@ -46,6 +46,16 @@
         grid-row-end: 10;
         text-align: center;
     }
+    @media only screen and (max-width: 900px) { 
+        .number {
+            font-size: 4rem;
+        }
+    }
+    @media only screen and (max-width: 600px) { 
+        .number {
+            font-size: 3rem;
+        }
+    }
     .hours {
         font-size: 3rem;
         grid-column-start: 9;
@@ -53,12 +63,27 @@
         grid-row-start: 8;
         grid-row-end: 8;
     }
+    @media only screen and (max-width: 900px) { 
+        .hours {
+            font-size: 2.7rem;
+        }
+    }
+    @media only screen and (max-width: 600px) { 
+        .hours {
+            font-size: 2rem;
+        }
+    }
     .text {
         font-size: 1.5rem;
         grid-column-start: 9;
         grid-column-end: 11;
         grid-row-start: 9;
         grid-row-end: 9;
+    }
+    @media only screen and (max-width: 600px) { 
+        .text {
+            font-size: 1rem;
+        }
     }
     
 }
